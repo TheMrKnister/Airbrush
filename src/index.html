@@ -1,5 +1,5 @@
-<!doctype html>
-<html lang="en">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<html lang="en" style="height: 100%">
 <head>
   <meta charset="utf-8">
   <title>Airbrush</title>
@@ -7,8 +7,34 @@
 
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="icon" type="image/x-icon" href="favicon.ico">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
 </head>
-<body>
-  <app-root></app-root>
+<body style="background-image: url(assets/Maske.jpg); background-repeat: no-repeat; background-position: center">
+  <div class="container">
+    <app-root></app-root>
+  </div>
 </body>
 </html>
+<script type="text/javascript">
+(function($) {
+  $(function() { // DOM Ready
+
+  // Insert all scripts here
+  $('nav ul li > a:not(:only-child)').click(function(e) {
+      $(this).siblings('.nav-dropdown').toggle();
+      $('.nav-dropdown').not($(this).siblings()).hide();
+      e.stopPropagation();
+    });
+    $('html').click(function() {
+      $('.nav-dropdown').hide();
+    });
+  });
+
+  $('#nav-toggle').on('click', function() {
+    this.classList.toggle('active');
+  });
+  $('#nav-toggle').click(function() {
+    $('nav ul').toggle();
+  });
+})(jQuery);
+</script>

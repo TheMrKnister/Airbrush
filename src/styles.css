@@ -1,1 +1,66 @@
 /* You can add global styles to this file, and also import other style files */
+html {
+    box-sizing: border-box;
+}
+
+*, *:before, *:after {
+    box-sizing: inherit;
+}
+
+h1 {
+    font-size: 1.5rem;
+}
+  
+@media screen and (min-width: 800px) {
+    h1 {
+        font-size: 2rem;
+    }
+}
+
+.container {
+    margin: 0 auto;
+    padding: 30px;
+    max-width: 972px;
+}
+
+.row::before,
+.row::after {
+  display: table;
+  content: " ";
+  clear: both;
+}
+
+.one,
+.one-third,
+.two-thirds,
+.one-fourth,
+.half {
+  width: 100%;
+}
+
+@media only screen and (min-width: 800px) {
+    .one {
+        width: 100%;
+    }
+    .half {
+        width: calc(100% / 2);
+    }
+    .one-third {
+        width: calc(100% / 3);
+    }
+    .one-fourth {
+        width: calc(100% / 4);
+    }
+    .one-fith {
+        width: calc(100% / 5);
+    }
+    .one-sixth{
+        width: calc(100% / 6);
+    }
+    .two-thirds {
+        width: calc(100% / 3 * 2);
+    }
+    .column {
+        float: left;
+    }
+}

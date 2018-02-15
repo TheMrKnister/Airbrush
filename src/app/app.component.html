@@ -1,20 +1,86 @@
 <!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    Welcome to {{ title }}!
-  </h1>
-  <img width="300" alt="Angular Logo" src="data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNTAgMjUwIj4KICAgIDxwYXRoIGZpbGw9IiNERDAwMzEiIGQ9Ik0xMjUgMzBMMzEuOSA2My4ybDE0LjIgMTIzLjFMMTI1IDIzMGw3OC45LTQzLjcgMTQuMi0xMjMuMXoiIC8+CiAgICA8cGF0aCBmaWxsPSIjQzMwMDJGIiBkPSJNMTI1IDMwdjIyLjItLjFWMjMwbDc4LjktNDMuNyAxNC4yLTEyMy4xTDEyNSAzMHoiIC8+CiAgICA8cGF0aCAgZmlsbD0iI0ZGRkZGRiIgZD0iTTEyNSA1Mi4xTDY2LjggMTgyLjZoMjEuN2wxMS43LTI5LjJoNDkuNGwxMS43IDI5LjJIMTgzTDEyNSA1Mi4xem0xNyA4My4zaC0zNGwxNy00MC45IDE3IDQwLjl6IiAvPgogIDwvc3ZnPg==">
+<div class="row">
+  <div class="one column">
+    <section class="navigation">
+      <div class="nav-container">
+        <div class="brand">
+          <a href="#!">www.arnold-design.ch</a>
+        </div>
+        <nav>
+          <div class="nav-mobile">
+            <a id="nav-toggle" href="#!">
+              <span></span>
+            </a>
+          </div>
+          <ul class="nav-list">
+          <li>
+              <a href="#!">Bildergalerie</a>
+              <ul class="nav-dropdown">
+                <li>
+                  <a href="#!">Web Design</a>
+                </li>
+                <li>
+                  <a href="#!">Web Development</a>
+                </li>
+                <li>
+                  <a href="#!">Graphic Design</a>
+                </li>
+              </ul>
+            </li>
+            <li>
+              <a href="#!">Atelier</a>
+            </li>
+            <li>
+              <a href="#!">Pricing</a>
+            </li>
+            <li>
+              <a href="#!">Contact</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </section>
+  </div>
 </div>
-<h2>Here are some links to help you start: </h2>
-<ul>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://angular.io/tutorial">Tour of Heroes</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://github.com/angular/angular-cli/wiki">CLI Documentation</a></h2>
-  </li>
-  <li>
-    <h2><a target="_blank" rel="noopener" href="https://blog.angular.io/">Angular blog</a></h2>
-  </li>
-</ul>
-
+<div class="row">
+  <div class="half column">Half column</div>
+  <div class="half column">Half column</div>
+</div>
+<!-- <div class="docs-wrapper u-no-max-width">
+    <header id="navigation" class="p-navigation">
+      <div class="p-navigation__banner">
+        <div class="p-navigation__logo">
+          <a class="p-navigation__link" href="#">
+            www.arnold-design.ch
+          </a>
+        </div>
+        <a href="#navigation" class="p-navigation__toggle--open" title="menu">Menu</a>
+        <a href="#navigation-closed" class="p-navigation__toggle--close" title="close menu">Close menu</a>
+      </div>
+      <nav class="p-navigation__nav" role="menubar">
+        <span class="u-off-screen">
+          <a href="#main-content">Jump to main content</a>
+        </span>
+        <ul class="p-navigation__links" role="menu">
+          <li class="p-navigation__link is-selected" role="menuitem">
+            <a href="#">Bildergalerie</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="#">Atelier</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="#">Holz Design</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="#">Danke</a>
+          </li>
+          <li class="p-navigation__link" role="menuitem">
+            <a href="#">Kontakt / Links</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+</div> -->
+<div>
+  <router-outlet></router-outlet>
+</div>
