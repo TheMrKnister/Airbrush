@@ -1,5 +1,30 @@
-<div class="ui six column doubling grid container">
-    <div *ngFor="let image of images" class="column">
-        <img class="ui small image segment centered" src="{{image}}">
+<div class="row">
+    <div *ngFor="let image of images; let i = index" class="one-sixth column">
+        <img class="image-medium" src="{{image}}"  (click)="currentSlide(i)">
+    </div>
+</div>
+
+<div id="myModal" class="modal">
+    <span class="close cursor" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+
+        <div class="mySlides" *ngFor="let image of images ; let i = index">
+            <div class="numbertext">{{i}} / {{images.length}}</div>
+            <img src="{{image}}" style="width:100%">
+        </div>
+
+        <!-- Next/previous controls -->
+        <a class="prev"  (click)="plusSlides(-1)">&#10094;</a>
+        <a class="next"  (click)="plusSlides(1)">&#10095;</a>
+
+        <!-- Caption text -->
+        <div class="caption-container">
+            <p id="caption"></p>
+        </div>
+
+        <!-- Thumbnail image controls -->
+        <div class="one-forth column" *ngFor="let image of images ; let i = index">
+            <img class="demo" src="{{image}}" (click)="currentSlide(i)" alt="Nature">
+        </div>
     </div>
 </div>
