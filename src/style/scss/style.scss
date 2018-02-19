@@ -236,15 +236,26 @@ h1 {
     }
 }
 
-.image-small{
+.image {
+  max-width: 100%;
+  margin: 0 auto;
+  display: block;
+  padding: 10px
+}
+
+.image-small {
+  @extend .image;
   height: 75px;
 }
 
 .image-medium{
-  height: 150px;
-  margin: 0 auto;
-  display: block;
-  padding: 10px
+  @extend .image;
+  height: 150px
+}
+
+.image-slider {
+  @extend .image;
+  max-height: 420px;
 }
 
 /* The Modal (background) */
@@ -342,6 +353,9 @@ h1 {
 
 img.demo {
   opacity: 0.6;
+  max-width: 100%;
+  margin: 0 auto;
+  max-height: 100px;
 }
 
 .active,

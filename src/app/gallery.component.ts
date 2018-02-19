@@ -1,4 +1,5 @@
 import { Component, NgModule, OnInit, EventEmitter } from '@angular/core';
+import { BrowserModule } from '@angular/platform-browser'
 import { ActivatedRoute } from '@angular/router';
 import { Location, NgForOf } from '@angular/common';
 import { HttpClient } from '@angular/common/http';
@@ -37,31 +38,31 @@ export class GalleryComponent implements OnInit {
     }
 
     // Open the Modal
-    openModal() {
+    public openModal = () => {
         document.getElementById('myModal').style.display = "block";
     }
 
     // Close the Modal
-    closeModal() {
+    public closeModal = () => {
         document.getElementById('myModal').style.display = "none";
     }
 
     // showSlides(slideIndex);
 
     // Next/previous controls
-    plusSlides(n) {
+    public plusSlides = (n) => {
         this.showSlides(this.slideIndex += n);
     }
 
     // Thumbnail image controls
-    currentSlide(n) {
+    public currentSlide = (n) => {
         this.showSlides(this.slideIndex = n);
     }
 
-    showSlides(n) {
+    public showSlides = (n) => {
         var i;
-        var slides = document.getElementsByClassName("mySlides");
-        var dots = document.getElementsByClassName("demo");
+        var slides = <HTMLCollectionOf<HTMLElement>> document.getElementsByClassName("mySlides");
+        var dots = <HTMLCollectionOf<HTMLElement>> document.getElementsByClassName("demo");
         var captionText = document.getElementById("caption");
         if (n > slides.length) { this.slideIndex = 1 }
         if (n < 1) { this.slideIndex = slides.length }
@@ -73,6 +74,6 @@ export class GalleryComponent implements OnInit {
         }
         slides[this.slideIndex - 1].style.display = "block";
         dots[this.slideIndex - 1].className += " active";
-        captionText.innerHTML = dots[this.slideIndex - 1].alt;
+        // captionText.innerHTML = dots[this.slideIndex - 1];
     }
 }
